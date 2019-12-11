@@ -6,13 +6,29 @@ var array1 = [1,2,3,4,5,6];
 var array2 = ["Pippo", "Pluto", "Paperino", "Topolino", "Minnie", "Clarabella"];
 var arrayAlternato = [];
 
-for (var i = 0; i < array1.length; i++) {}
+// for (var i = 0; i < array1.length; i++) {}
+//
+// for (var j = 0; j < array2.length; j++) {}
+//
+// for (var z = 0; z < array1.length; z++) {
+//     arrayAlternato.push (array1[z]);
+//     arrayAlternato.push (array2[z]);
+// }
+//
+// console.log(arrayAlternato);
 
-for (var j = 0; j < array2.length; j++) {}
 
-for (var z = 0; z < array1.length; z++) {
-    arrayAlternato.push (array1[z]);
-    arrayAlternato.push (array2[z]);
+var arrayFinale = fusione (array1, array2);
+console.log(arrayFinale);
+
+
+function fusione (array1, array2) {
+    var arrayAlternato = [];
+
+    for (var i = 0; i < array1.length; i++) {
+        arrayAlternato.push (array1[i]);
+        arrayAlternato.push (array2[i]);
+    }
+
+    return arrayAlternato;
 }
-
-console.log(arrayAlternato);
